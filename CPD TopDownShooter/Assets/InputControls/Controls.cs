@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Controls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/InputControls/Controls.inputactions'
 
 using System;
 using System.Collections;
@@ -147,7 +147,7 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""2D Vector"",
+                    ""name"": ""JoyStick"",
                     ""id"": ""e6dea342-891a-475c-a201-edf0a3b1356b"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",

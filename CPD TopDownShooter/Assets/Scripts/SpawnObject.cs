@@ -8,13 +8,12 @@ public class SpawnObject : MonoBehaviour
 
     public float spawninSeconds = 3.0f;
     private float SpawnCooldown = 0.0f;
-    // Start is called before the first frame update
+
     void Start()
     {
         SpawnCooldown = spawninSeconds;
     }
 
-    // Update is called once per frame
     void Update()
     {
         //objToSpawn.SetActive(true);

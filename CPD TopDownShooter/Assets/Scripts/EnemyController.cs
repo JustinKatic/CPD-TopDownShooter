@@ -7,22 +7,25 @@ public class EnemyController : MonoBehaviour
     private Rigidbody rb;
     public float moveSpeed;
 
+    //ref to player
     public PlayerController thePlayer;
-    // Start is called before the first frame update
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        //finds ref of player by looking for object with PlayerController Script on it
         thePlayer = FindObjectOfType<PlayerController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //make enemy face the players direction
         transform.LookAt(thePlayer.transform.position);
     }
 
     private void FixedUpdate()
     {
+        //move enemy forward
         rb.velocity = transform.forward * moveSpeed;
     }
 }

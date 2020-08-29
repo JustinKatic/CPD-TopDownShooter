@@ -12,7 +12,7 @@ public class PlayerHealthManager : MonoBehaviour
 
     private Renderer rend;
     private Color storedColor;
-    // Start is called before the first frame update
+
     void Start()
     {
         currentHealth = startingHealth;
@@ -20,7 +20,7 @@ public class PlayerHealthManager : MonoBehaviour
         storedColor = rend.material.GetColor("_Color");
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (currentHealth <= 0)

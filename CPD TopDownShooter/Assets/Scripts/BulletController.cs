@@ -7,20 +7,19 @@ public class BulletController : MonoBehaviour
     public float speed;
     public float lifeTime;
     public int damageToGive;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+
     void Update()
     {
+        //Move bullet forward
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
+
         lifeTime -= Time.deltaTime;
         if (lifeTime <= 0)
             Destroy(gameObject);
     }
+
+    //If collision with enemy deal damage to enemy and destory bullet
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy")

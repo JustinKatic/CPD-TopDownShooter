@@ -6,18 +6,21 @@ public class EnemyHealthManager : MonoBehaviour
 {
     public int health;
     public int currentHealth;
-    // Start is called before the first frame update
+
     void Start()
     {
+        //set initial health
         currentHealth = health; 
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //destory object if health <0
         if (currentHealth <= 0)
             Destroy(gameObject);
     }
+
+    //damage Enemy Object
     public void HurtEnemy(int damage)
     {
         currentHealth -= damage;
