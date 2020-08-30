@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHealthManager : MonoBehaviour
 {
-    public int startingHealth;
+    public int maxHealth;
     private int currentHealth;
 
     public float flashLength;
@@ -13,9 +13,12 @@ public class PlayerHealthManager : MonoBehaviour
     private Renderer rend;
     private Color storedColor;
 
+    public HealthBar healthBar;
+
     void Start()
     {
-        currentHealth = startingHealth;
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
         rend = GetComponent<Renderer>();
         storedColor = rend.material.GetColor("_Color");
     }
@@ -35,6 +38,7 @@ public class PlayerHealthManager : MonoBehaviour
     public void HurtPlayer(int damage)
     {
         currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
         flashCounter = flashLength;
         rend.material.SetColor("_Color", Color.white);
     }
