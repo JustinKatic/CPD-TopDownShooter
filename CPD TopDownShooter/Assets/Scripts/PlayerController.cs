@@ -12,8 +12,12 @@ public class PlayerController : MonoBehaviour
 
     public GunController theGun;
 
+    public VirtualJoystick moveJoystick;
+    public VirtualJoystick rotationJoystick;
+
     public bool usePS4Controller = false;
     public bool useMouseController = false;
+    public bool useTouchController = false;
 
     public Controls controls;
 
@@ -34,6 +38,26 @@ public class PlayerController : MonoBehaviour
         var dirMove = controls.Player.Move.ReadValue<Vector2>();
         moveInput = new Vector3(dirMove.x, 0f, dirMove.y);
         //store direction and speed inside of move velocity. move velocity applied in FixedUpdate()
+
+        if(useTouchController)
+        {
+            moveInput = moveJoystick.InputDirection;
+
+            Vector3 dirRot = rotationJoystick.InputDirection;
+            Vector3 playerDirection = Vector3.right * dirRot.x + Vector3.forward * dirRot.z;
+
+            //returns 1 if any rotation is being inputed from right joystick
+            if (playerDirection.sqrMagnitude > 0.0f)
+                transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
+
+            if (rotationJoystick.InputDirection != Vector3.zero)
+            {
+                theGun.isFiring = true;
+            }
+            else
+                theGun.isFiring = false;
+
+        }
         moveVelocity = moveInput * moveSpeed;
 
         //Rotate with Mouse
@@ -54,10 +78,10 @@ public class PlayerController : MonoBehaviour
 
             //If left mouse button down shoot
             if (Input.GetMouseButtonDown(0))
-                theGun.isFireing = true;
+                theGun.isFiring = true;
             //if left mouse button is up dont shoot
             if (Input.GetMouseButtonUp(0))
-                theGun.isFireing = false;
+                theGun.isFiring = false;
         }
         //Rotate with Controller
         if (usePS4Controller)
@@ -70,13 +94,13 @@ public class PlayerController : MonoBehaviour
             if (playerDirection.sqrMagnitude > 0.0f)
                 transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
 
-            //If player has any rotation slected with right joystick shoot
+            //If player has any rotation selected with right joystick shoot
             if (playerDirection.sqrMagnitude > 0.0f)
-                theGun.isFireing = true;
+                theGun.isFiring = true;
 
             //If player has no current rotation selected with right joystick dont shoot
             if (playerDirection.sqrMagnitude == 0.0f)
-                theGun.isFireing = false;
+                theGun.isFiring = false;
 
         }
     }

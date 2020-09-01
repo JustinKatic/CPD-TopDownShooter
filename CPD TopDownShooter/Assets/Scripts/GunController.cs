@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GunController : MonoBehaviour
 {
-    public bool isFireing;
+    public bool isFiring;
 
     public BulletController bullet;
     public float bulletSpeed;
@@ -15,7 +15,7 @@ public class GunController : MonoBehaviour
 
     void Update()
     {
-        if (isFireing)
+        if (isFiring)
         {
             shotCounter -= Time.deltaTime;
             if (shotCounter <= 0)
