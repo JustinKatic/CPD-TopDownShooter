@@ -1,15 +1,4 @@
-﻿/************************************************************************************
-*The Grand Sorcerer																	*
-*																					*
-*Spawns GameObjects at a random spawn position 									    *
-*																					*
-*																					*
-*																					*
-*															By Justin Katic			*
-************************************************************************************/
-
-
-
+﻿
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
