@@ -6,11 +6,20 @@ public class PlayerHeal : MonoBehaviour
 {
     public int healAmount;
 
-    private void OnTriggerEnter(Collider other)
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.tag == "Player")
+    //    {
+    //        other.gameObject.GetComponent<PlayerHealthManager>().HealPlayer(healAmount);
+    //        Destroy(gameObject);
+    //    }
+    //}
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<PlayerHealthManager>().HealPlayer(healAmount);
+            collision.gameObject.GetComponent<PlayerHealthManager>().HealPlayer(healAmount);
             Destroy(gameObject);
         }
     }

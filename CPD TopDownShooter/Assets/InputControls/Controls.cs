@@ -94,7 +94,7 @@ public class @Controls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""JoyStickMove"",
                     ""id"": ""f9141b8c-657b-4b1e-9e88-aefa1b2d40fd"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
