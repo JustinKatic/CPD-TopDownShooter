@@ -9,7 +9,7 @@ public class WaveSpawner : MonoBehaviour {
 
 	public enum SpawnState { SPAWNING, WAITING, COUNTING };
 
-	//public Text theWaveText;
+	public Text theWaveText;
 	//public Text highscoreText;
 
 
@@ -49,7 +49,7 @@ public class WaveSpawner : MonoBehaviour {
 		
 	void Start()
 	{
-		//theWaveText.text = "Hello";
+		theWaveText.text = "Hello";
 		//highscoreText.text = "Highscore : "  + PlayerPrefs.GetFloat("Highscore").ToString() ;			//Gets highscore save and loads into string(word form)
 
 		if (spawnPoints.Length == 0)								
@@ -62,7 +62,7 @@ public class WaveSpawner : MonoBehaviour {
 		
 	void Update()
 	{
-		//theWaveText.text = waves [nextWave].name;
+		theWaveText.text = waves [nextWave].name;
 
 		if (state == SpawnState.WAITING)										//checks if enimies are still alive
 		{

@@ -920,6 +920,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488533094}
   m_CullTransparentMesh: 0
+--- !u!1 &536417959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 536417962}
+  - component: {fileID: 536417961}
+  - component: {fileID: 536417960}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &536417960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536417959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 2
+    m_MaxSize: 197
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Wave #
+--- !u!222 &536417961
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536417959}
+  m_CullTransparentMesh: 0
+--- !u!224 &536417962
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536417959}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1845755103}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 13.6, y: -32}
+  m_SizeDelta: {x: 187.1, y: 63.9}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &671149104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2341,7 +2418,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -2359,6 +2436,7 @@ RectTransform:
   - {fileID: 393010057}
   - {fileID: 929424639}
   - {fileID: 1287385196}
+  - {fileID: 536417962}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2418,6 +2496,7 @@ GameObject:
   - component: {fileID: 1984316946}
   - component: {fileID: 1984316945}
   - component: {fileID: 1984316947}
+  - component: {fileID: 1984316948}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -2437,6 +2516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca4ba5d51aa8754d9a9aca8d25a85a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theWaveText: {fileID: 536417960}
   waves:
   - name: Wave 1
     enemy: {fileID: 1830255572178645216, guid: 4b7c8a6a5a94aea43b1df545eb82edd7, type: 3}
@@ -2555,7 +2635,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 8926608004805641297, guid: 76ae77e615971fe49a3ec431e38f663f, type: 3}
-  spawnTime: 0.2
+  spawnTime: 0.4
+  spawnPoints:
+  - {fileID: 309857626}
+  - {fileID: 285883393}
+  - {fileID: 2032812936}
+  - {fileID: 1600927810}
+  - {fileID: 2142250554}
+  - {fileID: 169482809}
+  - {fileID: 411564854}
+  - {fileID: 194806366}
+--- !u!114 &1984316948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984316944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa4033ac29e13744c9ad2eaa25178f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 8165882681206492050, guid: ae68ced78dcb33a4f9e4bd48f6db3df4, type: 3}
+  spawnTime: 5
   spawnPoints:
   - {fileID: 309857626}
   - {fileID: 285883393}
