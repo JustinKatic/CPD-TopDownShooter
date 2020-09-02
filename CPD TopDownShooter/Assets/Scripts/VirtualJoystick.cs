@@ -20,8 +20,7 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
     }
 
     public void OnDrag(PointerEventData eventData)
-    {
-        Debug.Log("OnDrag");
+    {        
         Vector2 pos = Vector2.zero;
         if(RectTransformUtility.ScreenPointToLocalPointInRectangle
             (bgImg.rectTransform,
@@ -46,13 +45,11 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("OnPointerDown");
         OnDrag(eventData);
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        Debug.Log("OnPointerUp");
         InputDirection = Vector3.zero;
         joystickImg.rectTransform.anchoredPosition = Vector3.zero;
     }
