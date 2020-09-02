@@ -2459,7 +2459,7 @@ MonoBehaviour:
     count: 5
     rate: 5
   - name: wave 6
-    enemy: {fileID: 621656980146641326, guid: 99bca50f3f39ca84b95d800617d3bc24, type: 3}
+    enemy: {fileID: 1830255572178645216, guid: 4b7c8a6a5a94aea43b1df545eb82edd7, type: 3}
     count: 6
     rate: 5
   - name: wave 7
