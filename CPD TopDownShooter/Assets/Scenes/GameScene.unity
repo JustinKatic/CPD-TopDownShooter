@@ -994,7 +994,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 13.6, y: -32}
+  m_AnchoredPosition: {x: 34, y: -32}
   m_SizeDelta: {x: 187.1, y: 63.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &671149104
@@ -2497,6 +2497,7 @@ GameObject:
   - component: {fileID: 1984316945}
   - component: {fileID: 1984316947}
   - component: {fileID: 1984316948}
+  - component: {fileID: 1984316949}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -2659,6 +2660,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 8165882681206492050, guid: ae68ced78dcb33a4f9e4bd48f6db3df4, type: 3}
   spawnTime: 5
+  spawnPoints:
+  - {fileID: 309857626}
+  - {fileID: 285883393}
+  - {fileID: 2032812936}
+  - {fileID: 1600927810}
+  - {fileID: 2142250554}
+  - {fileID: 169482809}
+  - {fileID: 411564854}
+  - {fileID: 194806366}
+--- !u!114 &1984316949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984316944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa4033ac29e13744c9ad2eaa25178f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1059482746979649462, guid: f3bf42c212e0c1246b4df2bb8b5f3962, type: 3}
+  spawnTime: 90
   spawnPoints:
   - {fileID: 309857626}
   - {fileID: 285883393}

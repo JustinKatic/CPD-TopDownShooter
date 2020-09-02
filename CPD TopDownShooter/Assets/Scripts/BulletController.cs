@@ -9,6 +9,8 @@ public class BulletController : MonoBehaviour
     public int damageToGive;
 
 
+
+
     void Update()
     {
         //Move bullet forward
@@ -22,7 +24,8 @@ public class BulletController : MonoBehaviour
     //If collision with enemy deal damage to enemy and destory bullet
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Giant")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Giant" ||
+            collision.gameObject.tag == "HealthZombie")
         {
             collision.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(damageToGive);
             Destroy(gameObject);
