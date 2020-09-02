@@ -149,7 +149,7 @@ public class @Controls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""JoyStick"",
                     ""id"": ""e6dea342-891a-475c-a201-edf0a3b1356b"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
