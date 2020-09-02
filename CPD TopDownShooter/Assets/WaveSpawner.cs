@@ -1,14 +1,4 @@
-﻿/************************************************************************************
-*The Grand Sorcerer																	*
-*																					*
-*Controlling the spawning of bosses and creating waves aswell as saving highscores  *
-*																					*
-*																					*
-*																					*
-*																					*
-************************************************************************************/
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,7 +17,7 @@ public class WaveSpawner : MonoBehaviour {
 	public class Wave
 	{
 		public string name;				//name of wave
-		public Transform enemy;			// refrence to prehab we want to initiate
+		public GameObject enemy;			// refrence to prehab we want to initiate
 		public int count;				// amount of waves
 		public float rate;				// spawn rate
 
@@ -97,10 +87,10 @@ public class WaveSpawner : MonoBehaviour {
 		{
 			waveCountdown -= Time.deltaTime;									//makes countdown relevent to time and not frames per second
 		}
-		{
-			if (PlayerPrefs.GetFloat ("Highscore") < nextWave)					//if Highscore number is less then wave number 
-				PlayerPrefs.SetFloat ("Highscore", nextWave); 					//set Highscore to the wave number
-		}
+		//{
+		//	if (PlayerPrefs.GetFloat ("Highscore") < nextWave)					//if Highscore number is less then wave number 
+		//		PlayerPrefs.SetFloat ("Highscore", nextWave); 					//set Highscore to the wave number
+		//}
 	}
 
 	void WaveCompleted()
@@ -127,7 +117,7 @@ public class WaveSpawner : MonoBehaviour {
 		if (searchCountdown <= 0f)
 		{
 			searchCountdown = 1f;											//check if all enemy are dead every 1 second instead of every frame
-			if (GameObject.FindGameObjectWithTag("Enemy") == null)			//checks if all enimies with the player tag enemy are alive or dead
+			if (GameObject.FindGameObjectWithTag("Giant") == null)			//checks if all enimies with the player tag enemy are alive or dead
 			{
 				return false;												// if enemy alive repeat step till enemies are dead check this every 1 second
 			}
@@ -144,7 +134,7 @@ public class WaveSpawner : MonoBehaviour {
 		{
 			Debug.Log("Spawning Enemy: " + _wave.enemy.name);
 
-			Instantiate(_wave.enemy, spawnPoints[i].position, _wave.enemy.rotation);
+			Instantiate(_wave.enemy, spawnPoints[i].position, _wave.enemy.transform.rotation);
 
 
 																//waits for player to finish killing enimies
