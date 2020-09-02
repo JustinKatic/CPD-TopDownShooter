@@ -34,6 +34,9 @@ public class PlayerHealthManager : MonoBehaviour
 
         if (flashCounter <= 0)
             rend.material.SetColor("_Color", storedColor);
+
+        if (currentHealth > maxHealth)
+            currentHealth = maxHealth;
     }
     public void HurtPlayer(int damage)
     {
@@ -41,5 +44,11 @@ public class PlayerHealthManager : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         flashCounter = flashLength;
         rend.material.SetColor("_Color", Color.white);
+    }
+
+    public void HealPlayer(int heal)
+    {
+        currentHealth += heal;
+        healthBar.SetHealth(currentHealth);
     }
 }

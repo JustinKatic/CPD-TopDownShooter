@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Giant
+  - HealthZombie
   layers:
   - Default
   - TransparentFX

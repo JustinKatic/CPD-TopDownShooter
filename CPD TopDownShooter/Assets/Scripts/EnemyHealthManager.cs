@@ -7,6 +7,8 @@ public class EnemyHealthManager : MonoBehaviour
     public int health;
     public int currentHealth;
 
+    public GameObject healthPotion;
+
     void Start()
     {
         //set initial health
@@ -17,7 +19,14 @@ public class EnemyHealthManager : MonoBehaviour
     {
         //destory object if health <0
         if (currentHealth <= 0)
+        {
+            if (gameObject.tag == "HealthZombie")
+            {
+                var obj = GameObject.Instantiate(healthPotion);
+                obj.transform.position = transform.position;
+            }
             Destroy(gameObject);
+        }
     }
 
     //damage Enemy Object
