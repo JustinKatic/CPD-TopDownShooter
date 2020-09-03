@@ -19,8 +19,6 @@ public class PlayerHealthManager : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-        rend = GetComponent<Renderer>();
-        storedColor = rend.material.GetColor("_Color");
     }
 
 
@@ -29,12 +27,6 @@ public class PlayerHealthManager : MonoBehaviour
         if (currentHealth <= 0)
             gameObject.SetActive(false);
 
-        if (flashCounter > 0)
-            flashCounter -= Time.deltaTime;
-
-        if (flashCounter <= 0)
-            rend.material.SetColor("_Color", storedColor);
-
         if (currentHealth > maxHealth)
             currentHealth = maxHealth;
     }
@@ -42,8 +34,6 @@ public class PlayerHealthManager : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
-        flashCounter = flashLength;
-        rend.material.SetColor("_Color", Color.white);
     }
 
     public void HealPlayer(int heal)
