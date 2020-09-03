@@ -1,0 +1,41 @@
+MENU
+- Fix menus to allow cross platform controlls
+- Improve font style/size
+- Background sounds
+- Maybe sounds when you hover over different buttons
+- Background image
+
+GAMEPLAY MECHANICS
+- Create new big boss zombie that spawns on wave x
+- Boss drops new shotgun weapon pickUp
+- Set default weapon to not active and shotgun weapon to active when pickUp shotgun
+- Fix hp prefab to spawn at a better location towards floor
+
+CODE TO FIX
+- Create a bool for useing phone statement to allow to not display
+  joysticks when not on phone
+- Convert all input systems to new input system style
+
+GAME SCENE
+- Fix walls to not have shit view bottom side
+
+ASSETS
+- Default gun asset
+- Default bullet asset
+- Shotgun asset
+- Shotgun bullet asset
+- Health Pack asset
+
+ANIMATION / SOUNDS AND EFFECTS
+- Fix player forever running
+- Maybe swap to death animation for both player and enemies
+- Background music
+- Shoot sounds
+- Hp potion sounds
+- Player hurt sounds
+- HighScore
+
+DOCUMENTATION
+- KILL ME NOW! :p
+
+
