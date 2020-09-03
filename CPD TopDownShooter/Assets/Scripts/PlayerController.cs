@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
 
             //returns 1 if any rotation is being inputed from right joystick
             if (playerDirection.sqrMagnitude > 0.0f)
-                transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
+                transform.rotation = Quaternion.LookRotation(playerDirection * Time.deltaTime, Vector3.up);
 
             if (rotationJoystick.InputDirection != Vector3.zero)
             {
@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
             {
                 Vector3 pointToLook = cameraRay.GetPoint(rayLength);
                 Debug.DrawLine(cameraRay.origin, pointToLook, Color.blue);
-
+                
                 transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
             }
 
@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
 
             //returns 1 if any rotation is being inputed from right joystick
             if (playerDirection.sqrMagnitude > 0.0f)
-                transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
+                transform.rotation = Quaternion.LookRotation(playerDirection * Time.deltaTime, Vector3.up );
 
             //If player has any rotation selected with right joystick shoot
             if (playerDirection.sqrMagnitude > 0.0f)
