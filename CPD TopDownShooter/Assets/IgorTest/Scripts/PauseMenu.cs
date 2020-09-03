@@ -5,8 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public string mainMenuScene;
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
+
+
+    private void Start()
+    {
+        gameIsPaused = false;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -18,7 +25,9 @@ public class PauseMenu : MonoBehaviour
             }
             else
             {
-                Pause();
+                pauseMenuUI.SetActive(true);
+                Time.timeScale = 0.0f;
+                gameIsPaused = true;
             }
         }
 
@@ -31,17 +40,11 @@ public class PauseMenu : MonoBehaviour
         gameIsPaused = false;
     }
 
-    void Pause()
-    {
-        pauseMenuUI.SetActive(true);
-        Time.timeScale = 0.0f;
-        gameIsPaused = true;
-    }
-
     public void LoadMenu()
     {
         Debug.Log("Loading Menu...");
-        SceneManager.LoadScene("Menu");
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(mainMenuScene);
     }
 
     public void QuitGame()
