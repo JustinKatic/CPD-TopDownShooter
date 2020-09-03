@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveVelocity;
 
     public GunController theGun;
+    public GunController theGun1;
 
     public VirtualJoystick moveJoystick;
     public VirtualJoystick rotationJoystick;
@@ -82,6 +83,13 @@ public class PlayerController : MonoBehaviour
             //if left mouse button is up dont shoot
             if (Input.GetMouseButtonUp(0))
                 theGun.isFiring = false;
+
+            //If left mouse button down shoot
+            if (Input.GetMouseButtonDown(1))
+                theGun1.isFiring = true;
+            //if left mouse button is up dont shoot
+            if (Input.GetMouseButtonUp(1))
+                theGun1.isFiring = false;
         }
         //Rotate with Controller
         if (usePS4Controller)
