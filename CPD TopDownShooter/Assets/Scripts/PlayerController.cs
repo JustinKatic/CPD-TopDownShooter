@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
         theGunObj.SetActive(true);
         theGun1Obj.SetActive(false);
         theGun.isFiring = false;
-      
+
     }
 
     void Update()
@@ -60,9 +60,13 @@ public class PlayerController : MonoBehaviour
             if (rotationJoystick.InputDirection != Vector3.zero)
             {
                 theGun.isFiring = true;
+                theGun1.isFiring = true;
             }
             else
+            {
                 theGun.isFiring = false;
+                theGun1.isFiring = false;
+            }
 
         }
         moveVelocity = moveInput * moveSpeed;
@@ -110,11 +114,18 @@ public class PlayerController : MonoBehaviour
 
             //If player has any rotation selected with right joystick shoot
             if (playerDirection.sqrMagnitude > 0.0f)
+            {
                 theGun.isFiring = true;
+                theGun1.isFiring = true;
+            }
+
 
             //If player has no current rotation selected with right joystick dont shoot
             if (playerDirection.sqrMagnitude == 0.0f)
+            {
                 theGun.isFiring = false;
+                theGun1.isFiring = false;
+            }
 
         }
     }
