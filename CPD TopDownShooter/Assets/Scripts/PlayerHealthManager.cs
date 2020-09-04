@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthManager : MonoBehaviour
 {
@@ -21,11 +22,14 @@ public class PlayerHealthManager : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
     }
 
-
     void Update()
     {
         if (currentHealth <= 0)
+        {
+            
+            FindObjectOfType<GameManager>().EndGame();
             gameObject.SetActive(false);
+        }
 
         if (currentHealth > maxHealth)
             currentHealth = maxHealth;
