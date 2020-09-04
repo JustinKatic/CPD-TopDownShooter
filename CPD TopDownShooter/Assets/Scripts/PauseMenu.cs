@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -14,15 +15,19 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseFirstButton;
 
+    public Controls controls;
+
     private void Start()
     {
         gameIsPaused = false;
+        controls = new Controls();
+        controls.Enable();
+        controls.Player.Pause.performed += Pause_performed;
     }
-    // Update is called once per frame
-    void Update()
+
+    private void Pause_performed(InputAction.CallbackContext obj)
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
+    
             if (gameIsPaused)
             {
                 Resume();
@@ -37,9 +42,8 @@ public class PauseMenu : MonoBehaviour
 
                 EventSystem.current.SetSelectedGameObject(pauseFirstButton);
             }
-        }
-
     }
+
 
     public void Resume()
     {
