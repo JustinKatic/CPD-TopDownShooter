@@ -986,6 +986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   currentHealth: 0
+  ItemToDrop: {fileID: 0}
 --- !u!114 &7946194481817114630
 MonoBehaviour:
   m_ObjectHideFlags: 0

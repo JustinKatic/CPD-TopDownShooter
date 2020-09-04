@@ -725,7 +725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   currentHealth: 0
-  healthPotion: {fileID: 0}
+  ItemToDrop: {fileID: 0}
 --- !u!114 &464954268283052916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,7 +738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49b143ae6cfb7064ab256102f746551b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 13
+  moveSpeed: 14
   thePlayer: {fileID: 0}
 --- !u!114 &1267875843156929438
 MonoBehaviour:
