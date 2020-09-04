@@ -9,14 +9,25 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
     private Image bgImg;
     private Image joystickImg;
 
+    public bool onMobile = false;
+
     public Vector3 InputDirection { set; get; }
+
+#if (UNITY_ANDROID || UNITY_IOS || UNITY_WP8 || UNITY_WP8_1)
+    onMobile = true;
+#endif
 
     // Start is called before the first frame update
     private void Start()
     {
-        bgImg = GetComponent<Image>();
-        joystickImg = transform.GetChild(0).GetComponent<Image>();
-        InputDirection = Vector3.zero;
+        if(!onMobile)
+        {
+            gameObject.SetActive(false);
+        }
+            bgImg = GetComponent<Image>();
+            joystickImg = transform.GetChild(0).GetComponent<Image>();
+            InputDirection = Vector3.zero;
+        
     }
 
     public void OnDrag(PointerEventData eventData)

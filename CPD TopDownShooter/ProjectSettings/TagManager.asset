@@ -8,6 +8,7 @@ TagManager:
   - Giant
   - HealthZombie
   - PlayerEyes
+  - touchJoystick
   layers:
   - Default
   - TransparentFX
