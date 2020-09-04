@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4490118298227801627}
   - component: {fileID: 4490118298227801626}
   - component: {fileID: 4490118298227801625}
-  - component: {fileID: 2915385069904634031}
+  - component: {fileID: 8297915898453524783}
   m_Layer: 8
   m_Name: HealthPack
   m_TagString: Untagged
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 10
---- !u!54 &2915385069904634031
+--- !u!54 &8297915898453524783
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
