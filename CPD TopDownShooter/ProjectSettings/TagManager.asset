@@ -8,6 +8,8 @@ TagManager:
   - Giant
   - HealthZombie
   - PlayerEyes
+  - Boss
+  - ShotGun
   layers:
   - Default
   - TransparentFX

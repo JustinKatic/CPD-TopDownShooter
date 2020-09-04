@@ -286,7 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   currentHealth: 0
-  healthPotion: {fileID: 4490118298227801624, guid: dcebbc1918b624746baeb3c063c41e4d,
+  ItemToDrop: {fileID: 4490118298227801624, guid: dcebbc1918b624746baeb3c063c41e4d,
     type: 3}
 --- !u!114 &8760868555733561168
 MonoBehaviour:
