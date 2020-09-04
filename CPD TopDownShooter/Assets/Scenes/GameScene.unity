@@ -493,6 +493,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 839034668}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &183008070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183008067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7bc61f2a0b1264291ad53b2af5f700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultGun: {fileID: 1879794571}
+  ShotGun: {fileID: 847674511}
 --- !u!4 &183008072 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2961359528211957562, guid: 3dc2eb28cb14120449d4dc05580c468a,
@@ -558,6 +572,8 @@ MonoBehaviour:
   moveSpeed: 15
   theGun: {fileID: 1879794572}
   theGun1: {fileID: 847674513}
+  theGunObj: {fileID: 1879794571}
+  theGun1Obj: {fileID: 847674511}
   moveJoystick: {fileID: 929424640}
   rotationJoystick: {fileID: 1287385197}
   usePS4Controller: 0
@@ -3645,7 +3661,7 @@ GameObject:
   m_Layer: 9
   m_Name: FirePoint (3)
   m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4370,7 +4386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1879794572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4383,7 +4399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46ea3fc2969d4d84a98f059406e622a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFiring: 0
+  isFiring: 1
   bullet: {fileID: 2485081008689964278, guid: 38835e28bcc57a1429f3f0097fbc84c7, type: 3}
   bulletSpeed: 20
   timeBetweenShots: 0.05
@@ -4620,8 +4636,8 @@ MonoBehaviour:
     count: 4
     rate: 5
   - name: wave 5
-    enemy: {fileID: 1830255572178645216, guid: 4b7c8a6a5a94aea43b1df545eb82edd7, type: 3}
-    count: 5
+    enemy: {fileID: 8854455148459872857, guid: 388fcba7c92debe42aa92adb2356deef, type: 3}
+    count: 1
     rate: 5
   - name: wave 6
     enemy: {fileID: 1830255572178645216, guid: 4b7c8a6a5a94aea43b1df545eb82edd7, type: 3}

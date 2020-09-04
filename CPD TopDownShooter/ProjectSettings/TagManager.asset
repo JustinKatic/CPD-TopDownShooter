@@ -9,6 +9,8 @@ TagManager:
   - HealthZombie
   - PlayerEyes
   - touchJoystick
+  - Boss
+  - ShotGun
   layers:
   - Default
   - TransparentFX

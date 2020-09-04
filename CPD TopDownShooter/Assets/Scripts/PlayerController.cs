@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
 
     public GunController theGun;
     public GunController theGun1;
+    public GameObject theGunObj;
+    public GameObject theGun1Obj;
 
     public VirtualJoystick moveJoystick;
     public VirtualJoystick rotationJoystick;
@@ -23,7 +25,7 @@ public class PlayerController : MonoBehaviour
     public Controls controls;
 
     private Camera cam;
- 
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -32,6 +34,10 @@ public class PlayerController : MonoBehaviour
         //Get input contols and enable them
         controls = new Controls();
         controls.Enable();
+        theGunObj.SetActive(true);
+        theGun1Obj.SetActive(false);
+        theGun.isFiring = false;
+      
     }
 
     void Update()
@@ -40,7 +46,7 @@ public class PlayerController : MonoBehaviour
         moveInput = new Vector3(dirMove.x, 0f, dirMove.y);
         //store direction and speed inside of move velocity. move velocity applied in FixedUpdate()
 
-        if(useTouchController)
+        if (useTouchController)
         {
             moveInput = moveJoystick.InputDirection;
 
@@ -73,34 +79,34 @@ public class PlayerController : MonoBehaviour
             {
                 Vector3 pointToLook = cameraRay.GetPoint(rayLength);
                 Debug.DrawLine(cameraRay.origin, pointToLook, Color.blue);
-                
+
                 transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
             }
 
             //If left mouse button down shoot
             if (Input.GetMouseButtonDown(0))
+            {
                 theGun.isFiring = true;
+                theGun1.isFiring = true;
+            }
             //if left mouse button is up dont shoot
             if (Input.GetMouseButtonUp(0))
+            {
                 theGun.isFiring = false;
-
-            //If left mouse button down shoot
-            if (Input.GetMouseButtonDown(1))
-                theGun1.isFiring = true;
-            //if left mouse button is up dont shoot
-            if (Input.GetMouseButtonUp(1))
                 theGun1.isFiring = false;
+            }
+
         }
         //Rotate with Controller
         if (usePS4Controller)
         {
             //Get the current rotation from input and stores in a vector 3
             var dirRot = controls.Player.Rotation.ReadValue<Vector2>();
-           Vector3 playerDirection = Vector3.right * dirRot.x + Vector3.forward * dirRot.y;
+            Vector3 playerDirection = Vector3.right * dirRot.x + Vector3.forward * dirRot.y;
 
             //returns 1 if any rotation is being inputed from right joystick
             if (playerDirection.sqrMagnitude > 0.0f)
-                transform.rotation = Quaternion.LookRotation(playerDirection * Time.deltaTime, Vector3.up );
+                transform.rotation = Quaternion.LookRotation(playerDirection * Time.deltaTime, Vector3.up);
 
             //If player has any rotation selected with right joystick shoot
             if (playerDirection.sqrMagnitude > 0.0f)

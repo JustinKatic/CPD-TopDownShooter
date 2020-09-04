@@ -20,7 +20,7 @@ public class EnemyHealthManager : MonoBehaviour
         //destory object if health <0
         if (currentHealth <= 0)
         {
-            if (gameObject.tag == "HealthZombie")
+            if (gameObject.tag == "HealthZombie" || gameObject.tag == "Boss")
             {
                 var obj = GameObject.Instantiate(ItemToDrop);
                 obj.transform.position = transform.position;           

@@ -117,7 +117,8 @@ public class WaveSpawner : MonoBehaviour {
 		if (searchCountdown <= 0f)
 		{
 			searchCountdown = 1f;											//check if all enemy are dead every 1 second instead of every frame
-			if (GameObject.FindGameObjectWithTag("Giant") == null)			//checks if all enimies with the player tag enemy are alive or dead
+			if (GameObject.FindGameObjectWithTag("Giant") == null &&
+			GameObject.FindGameObjectWithTag("Boss") == null)			//checks if all enimies with the player tag enemy are alive or dead
 			{
 				return false;												// if enemy alive repeat step till enemies are dead check this every 1 second
 			}
