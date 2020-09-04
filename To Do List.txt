@@ -18,6 +18,7 @@ CODE TO FIX
 
 GAME SCENE
 - Fix walls to not have shit view bottom side
+- Post processing
 
 ASSETS
 - Default gun asset
@@ -33,6 +34,8 @@ ANIMATION / SOUNDS AND EFFECTS
 - Shoot sounds
 - Hp potion sounds
 - Player hurt sounds
+- player hurt effects (blood)
+enemy hurt effects (blood)
 - HighScore
 
 DOCUMENTATION

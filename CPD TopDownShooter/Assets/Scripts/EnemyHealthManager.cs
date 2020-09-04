@@ -7,7 +7,7 @@ public class EnemyHealthManager : MonoBehaviour
     public int health;
     public int currentHealth;
 
-    public GameObject healthPotion;
+    public GameObject ItemToDrop;
 
     void Start()
     {
@@ -22,8 +22,8 @@ public class EnemyHealthManager : MonoBehaviour
         {
             if (gameObject.tag == "HealthZombie")
             {
-                var obj = GameObject.Instantiate(healthPotion);
-                obj.transform.position = transform.position;
+                var obj = GameObject.Instantiate(ItemToDrop);
+                obj.transform.position = transform.position;           
             }
             Destroy(gameObject);
         }
