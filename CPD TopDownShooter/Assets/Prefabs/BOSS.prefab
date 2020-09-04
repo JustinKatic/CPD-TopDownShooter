@@ -282,7 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1747a14eabe2e504d8368c622576d8cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 250
   currentHealth: 0
   ItemToDrop: {fileID: 959722333883083672, guid: 486a0ab0df585a94780ad300b5768e06,
     type: 3}
