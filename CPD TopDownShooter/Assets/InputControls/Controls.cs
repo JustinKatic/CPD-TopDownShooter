@@ -230,6 +230,17 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2d4944f8-2c6e-43ff-a9e1-08aa40dc153d"",
+                    ""path"": ""<Touchscreen>/press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }

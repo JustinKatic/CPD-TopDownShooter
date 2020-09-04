@@ -17,6 +17,8 @@ public class PauseMenu : MonoBehaviour
 
     public Controls controls;
 
+    public GameObject touchPauseButton;
+
     private void Start()
     {
         gameIsPaused = false;
@@ -27,29 +29,36 @@ public class PauseMenu : MonoBehaviour
 
     private void Pause_performed(InputAction.CallbackContext obj)
     {
-    
-            if (gameIsPaused)
-            {
-                Resume();
-            }
-            else
-            {
-                pauseMenuUI.SetActive(true);
-                Time.timeScale = 0.0f;
-                gameIsPaused = true;
 
-                EventSystem.current.SetSelectedGameObject(null);
-
-                EventSystem.current.SetSelectedGameObject(pauseFirstButton);
-            }
+        if (gameIsPaused)
+        {
+            Resume();
+        }
+        else
+        {
+            Pause();
+        }
     }
 
+    public void Pause()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0.0f;
+        gameIsPaused = true;
+
+        EventSystem.current.SetSelectedGameObject(null);
+
+        EventSystem.current.SetSelectedGameObject(pauseFirstButton);
+
+        touchPauseButton.SetActive(false);
+    }
 
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1.0f;
         gameIsPaused = false;
+        touchPauseButton.SetActive(true);
     }
 
     public void LoadMenu()
