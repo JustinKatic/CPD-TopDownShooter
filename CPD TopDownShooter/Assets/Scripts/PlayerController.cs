@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
         theGunObj.SetActive(true);
         theGun1Obj.SetActive(false);
         theGun.isFiring = false;
-
+      
     }
 
     void Update()

@@ -17,14 +17,8 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
     // Start is called before the first frame update
     private void Start()
     {
-<<<<<<< HEAD
-#if (UNITY_ANDROID || UNITY_IOS || UNITY_WP8 || UNITY_WP8_1)  
-    onMobile = true;
-        
-=======
 #if (UNITY_ANDROID || UNITY_IOS || UNITY_WP8 || UNITY_WP8_1)
-        onMobile = true;
->>>>>>> ad1d54e2141a603a22bace7f1433160bca36f6b7
+    onMobile = true;
 #endif
         if (!onMobile)
         {
