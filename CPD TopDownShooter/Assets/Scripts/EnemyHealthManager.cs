@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class EnemyHealthManager : MonoBehaviour
 {
     public int health;
     public int currentHealth;
-
+    public int scoreValue = 1;
     public GameObject ItemToDrop;
 
     void Start()
@@ -25,6 +26,7 @@ public class EnemyHealthManager : MonoBehaviour
                 var obj = GameObject.Instantiate(ItemToDrop);
                 obj.transform.position = transform.position;           
             }
+            ScoreManager.score += scoreValue;
             Destroy(gameObject);
         }
     }
