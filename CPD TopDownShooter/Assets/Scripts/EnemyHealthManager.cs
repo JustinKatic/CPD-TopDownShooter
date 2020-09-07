@@ -9,6 +9,7 @@ public class EnemyHealthManager : MonoBehaviour
     public int currentHealth;
     public int scoreValue = 1;
     public GameObject ItemToDrop;
+    public GameObject blood;
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class EnemyHealthManager : MonoBehaviour
                 var obj = GameObject.Instantiate(ItemToDrop);
                 obj.transform.position = transform.position;           
             }
+            Instantiate(blood, transform.position, Quaternion.identity);
             ScoreManager.score += scoreValue;
             Destroy(gameObject);
         }

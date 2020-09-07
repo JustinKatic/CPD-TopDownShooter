@@ -284,8 +284,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 300
   currentHealth: 0
+  scoreValue: 1
   ItemToDrop: {fileID: 959722333883083672, guid: 486a0ab0df585a94780ad300b5768e06,
     type: 3}
+  blood: {fileID: 2459954626238914700, guid: b7c3f159701d0464f95ebaa62dfd2d40, type: 3}
 --- !u!114 &991225616514136767
 MonoBehaviour:
   m_ObjectHideFlags: 0
