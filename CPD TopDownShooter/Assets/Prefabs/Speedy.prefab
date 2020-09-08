@@ -728,6 +728,7 @@ MonoBehaviour:
   scoreValue: 1
   ItemToDrop: {fileID: 0}
   blood: {fileID: 2459954626238914700, guid: c3e5583d427bde249b8d860de0307d20, type: 3}
+  blood2: {fileID: 2459954626238914700, guid: c3e5583d427bde249b8d860de0307d20, type: 3}
 --- !u!114 &464954268283052916
 MonoBehaviour:
   m_ObjectHideFlags: 0

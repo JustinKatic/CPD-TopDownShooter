@@ -10,6 +10,7 @@ public class EnemyHealthManager : MonoBehaviour
     public int scoreValue = 1;
     public GameObject ItemToDrop;
     public GameObject blood;
+    public GameObject blood2;
 
     void Start()
     {
@@ -28,6 +29,7 @@ public class EnemyHealthManager : MonoBehaviour
                 obj.transform.position = transform.position;           
             }
             Instantiate(blood, transform.position, Quaternion.identity);
+            Instantiate(blood2, transform.position, Quaternion.identity);
             ScoreManager.score += scoreValue;
             Destroy(gameObject);
         }
