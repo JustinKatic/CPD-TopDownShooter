@@ -6,18 +6,25 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public static int score;
+    public Text Scoretext;
 
-    public Text text;
+    public Text highscoreText;
     
     void Awake()
     {
-        text = GetComponent<Text>();
+        Scoretext = GetComponent<Text>();
         score = 0;
+       
+        highscoreText.text = "Highscore : " + PlayerPrefs.GetFloat("Highscore").ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        text.text = "Zombies killed: " + score;
+        Scoretext.text = "Zombie Kill Score: " + score;
+
+
+        if (PlayerPrefs.GetFloat("Highscore") < score)
+            PlayerPrefs.SetFloat("Highscore", score);
     }
 }

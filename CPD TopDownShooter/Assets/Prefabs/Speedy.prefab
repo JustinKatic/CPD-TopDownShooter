@@ -639,7 +639,7 @@ Transform:
   m_GameObject: {fileID: 8165882681206492050}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 37.3, y: -1.908205e-16, z: -12.9}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 7, y: 4, z: 7}
   m_Children:
   - {fileID: 8161735687659099674}
   - {fileID: 8168379769519109752}
@@ -725,7 +725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   currentHealth: 0
-  scoreValue: 1
+  scoreValue: 15
   ItemToDrop: {fileID: 0}
   blood: {fileID: 2459954626238914700, guid: c3e5583d427bde249b8d860de0307d20, type: 3}
   blood2: {fileID: 2459954626238914700, guid: c3e5583d427bde249b8d860de0307d20, type: 3}
@@ -741,7 +741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49b143ae6cfb7064ab256102f746551b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 14
+  moveSpeed: 17
   thePlayer: {fileID: 0}
 --- !u!114 &1267875843156929438
 MonoBehaviour:
