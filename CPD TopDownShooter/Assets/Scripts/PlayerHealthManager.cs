@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealthManager : MonoBehaviour
 {
     public int maxHealth;
-    private int currentHealth;
+    public int currentHealth;
 
     public float flashLength;
     private float flashCounter;

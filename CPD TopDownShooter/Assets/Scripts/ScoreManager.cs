@@ -11,12 +11,18 @@ public class ScoreManager : MonoBehaviour
 
     public Text highscoreText;
 
+    public GameObject player;
+
+    float highScore;
+
     void Awake()
     {
         Scoretext = GetComponent<Text>();
         score = 0;
 
         highscoreText.text = "Highscore : " + PlayerPrefs.GetFloat("Highscore").ToString();
+
+        highScore = PlayerPrefs.GetFloat("Highscore");
     }
 
     // Update is called once per frame
@@ -25,8 +31,11 @@ public class ScoreManager : MonoBehaviour
         Scoretext.text = "Zombie Kill Score: " + score;
 
 
-        if (PlayerPrefs.GetFloat("Highscore") < score)
+        if (highScore < score)
             PlayerPrefs.SetFloat("Highscore", score);
-       
+
+        if (player.GetComponent<PlayerHealthManager>().currentHealth <= 0)
+            PlayerPrefs.SetFloat("Score", score);
+
     }
 }
