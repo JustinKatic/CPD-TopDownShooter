@@ -284,9 +284,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1747a14eabe2e504d8368c622576d8cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 30
+  health: 50
   currentHealth: 0
-  scoreValue: 1
+  scoreValue: 50
   ItemToDrop: {fileID: 4490118298227801624, guid: dcebbc1918b624746baeb3c063c41e4d,
     type: 3}
   blood: {fileID: 2459954626238914700, guid: b7c3f159701d0464f95ebaa62dfd2d40, type: 3}

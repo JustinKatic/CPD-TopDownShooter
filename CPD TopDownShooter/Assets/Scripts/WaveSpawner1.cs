@@ -6,7 +6,7 @@ public class WaveSpawner1 : MonoBehaviour
 {
 
     public Text theWaveText;
-    public Text highscoreText;
+   // public Text highscoreText;
 
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
 
@@ -46,7 +46,7 @@ public class WaveSpawner1 : MonoBehaviour
     void Start()
     {
         theWaveText.text = "Hello";
-        highscoreText.text = "Highscore : " + PlayerPrefs.GetFloat("Highscore").ToString();
+       // highscoreText.text = "Highscore : " + PlayerPrefs.GetFloat("Highscore").ToString();
 
         if (spawnPoints.Length == 0)
         {
@@ -83,8 +83,8 @@ public class WaveSpawner1 : MonoBehaviour
         {
             waveCountdown -= Time.deltaTime;
         }
-        	if (PlayerPrefs.GetFloat ("Highscore") < nextWave)			
-        		PlayerPrefs.SetFloat ("Highscore", nextWave); 	
+        	//if (PlayerPrefs.GetFloat ("Highscore") < nextWave)			
+        	//	PlayerPrefs.SetFloat ("Highscore", nextWave); 	
     }
 
     void WaveCompleted()

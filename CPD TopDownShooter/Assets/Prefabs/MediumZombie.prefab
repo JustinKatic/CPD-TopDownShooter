@@ -940,7 +940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   currentHealth: 0
-  scoreValue: 1
+  scoreValue: 10
   ItemToDrop: {fileID: 0}
   blood: {fileID: 2459954626238914700, guid: c3e5583d427bde249b8d860de0307d20, type: 3}
   blood2: {fileID: 2459954626238914700, guid: 4712011036e35d045bfae998d59d41ff, type: 3}
