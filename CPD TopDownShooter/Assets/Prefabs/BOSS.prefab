@@ -285,7 +285,7 @@ MonoBehaviour:
   health: 300
   currentHealth: 0
   scoreValue: 100
-  ItemToDrop: {fileID: 959722333883083672, guid: 486a0ab0df585a94780ad300b5768e06,
+  ItemToDrop: {fileID: 5756951613907414537, guid: 1fcf88f4d83d34e47963d46cc20434b9,
     type: 3}
   blood: {fileID: 2459954626238914700, guid: b7c3f159701d0464f95ebaa62dfd2d40, type: 3}
   blood2: {fileID: 2459954626238914700, guid: b7c3f159701d0464f95ebaa62dfd2d40, type: 3}
