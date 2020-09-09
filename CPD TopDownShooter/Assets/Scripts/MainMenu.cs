@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
 
     public GameObject playFirstButton;
 
+
     private void Start()
     {
         EventSystem.current.SetSelectedGameObject(null);
@@ -23,6 +24,7 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayGame()
     {
+        FindObjectOfType<LevelLoader>().LoadNextLevel();
         SceneManager.LoadScene(newGameScene);
     }
 
