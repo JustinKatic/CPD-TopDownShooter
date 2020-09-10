@@ -15,6 +15,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuWeb;
 
     public GameObject pauseFirstButton;
+    public GameObject pauseFirstButtonWeb;
+
 
     public Controls controls;
 
@@ -53,18 +55,21 @@ public class PauseMenu : MonoBehaviour
         if (onWeb)
         {
             pauseMenuWeb.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(null);
+
+            EventSystem.current.SetSelectedGameObject(pauseFirstButtonWeb);
         }
         else
-        { 
-            pauseMenuUI.SetActive(true); 
+        {
+            pauseMenuUI.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(null);
+
+            EventSystem.current.SetSelectedGameObject(pauseFirstButton);
         }
 
         Time.timeScale = 0.0f;
         gameIsPaused = true;
 
-        EventSystem.current.SetSelectedGameObject(null);
-
-        EventSystem.current.SetSelectedGameObject(pauseFirstButton);
 
         touchPauseButton.SetActive(false);
 
@@ -80,7 +85,7 @@ public class PauseMenu : MonoBehaviour
         {
             pauseMenuUI.SetActive(false);
         }
-        
+
         Time.timeScale = 1.0f;
         gameIsPaused = false;
         touchPauseButton.SetActive(true);
