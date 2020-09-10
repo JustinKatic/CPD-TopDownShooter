@@ -10,9 +10,17 @@ public class MainMenu : MonoBehaviour
 
     public GameObject playFirstButton;
 
+    public GameObject button;
 
+    bool onWeb = false;
     private void Start()
     {
+#if (UNITY_WEBGL)
+        onWeb = true;
+#endif
+        if (onWeb)
+            button.SetActive(false);
+
         EventSystem.current.SetSelectedGameObject(null);
 
         EventSystem.current.SetSelectedGameObject(playFirstButton);

@@ -549,6 +549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newGameScene: GameScene
   playFirstButton: {fileID: 1640939719}
+  button: {fileID: 451636352}
 --- !u!1001 &1191100125
 PrefabInstance:
   m_ObjectHideFlags: 0
