@@ -287,8 +287,10 @@ MonoBehaviour:
   scoreValue: 100
   ItemToDrop: {fileID: 5756951613907414537, guid: 1fcf88f4d83d34e47963d46cc20434b9,
     type: 3}
-  blood: {fileID: 2459954626238914700, guid: b7c3f159701d0464f95ebaa62dfd2d40, type: 3}
+  blood: {fileID: 2459954626238914700, guid: a9ffe9853b12efb46a7200874a605404, type: 3}
   blood2: {fileID: 2459954626238914700, guid: b7c3f159701d0464f95ebaa62dfd2d40, type: 3}
+  hitBlood: {fileID: 2459954626238914700, guid: f7409129c8d012b4490dcb92996e9e3b,
+    type: 3}
 --- !u!114 &991225616514136767
 MonoBehaviour:
   m_ObjectHideFlags: 0

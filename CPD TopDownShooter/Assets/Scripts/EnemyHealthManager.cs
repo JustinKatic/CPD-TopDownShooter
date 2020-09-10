@@ -11,6 +11,7 @@ public class EnemyHealthManager : MonoBehaviour
     public GameObject ItemToDrop;
     public GameObject blood;
     public GameObject blood2;
+    public GameObject hitBlood;
 
     void Start()
     {
@@ -38,6 +39,7 @@ public class EnemyHealthManager : MonoBehaviour
     //damage Enemy Object
     public void HurtEnemy(int damage)
     {
+        Instantiate(hitBlood, transform.position, Quaternion.identity);
         currentHealth -= damage;
     }
 }
