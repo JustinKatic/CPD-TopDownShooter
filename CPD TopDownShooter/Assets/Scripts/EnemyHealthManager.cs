@@ -13,14 +13,31 @@ public class EnemyHealthManager : MonoBehaviour
     public GameObject blood2;
     public GameObject hitBlood;
 
+    public float flashLength;
+    private float flashCounter;
+
+    private Renderer rend;
+    private Color storedColor;
+
     void Start()
     {
         //set initial health
-        currentHealth = health; 
+        currentHealth = health;
+        rend = GetComponent<Renderer>();
+        storedColor = rend.material.GetColor("_Color");
     }
 
     void Update()
     {
+        if(flashCounter > 0)
+        {
+            flashCounter -= Time.deltaTime;
+            if(flashCounter <= 0)
+            {
+                rend.material.SetColor("_Color", storedColor);
+            }
+        }
+
         //destory object if health <0
         if (currentHealth <= 0)
         {
@@ -41,5 +58,7 @@ public class EnemyHealthManager : MonoBehaviour
     {
         Instantiate(hitBlood, transform.position, Quaternion.identity);
         currentHealth -= damage;
+        flashCounter = flashLength;
+        rend.material.SetColor("_Color", Color.white);
     }
 }

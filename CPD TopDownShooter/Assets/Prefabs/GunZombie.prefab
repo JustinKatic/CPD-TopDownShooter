@@ -223,6 +223,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GunZombie
       objectReference: {fileID: 0}
+    - target: {fileID: 4474888211867091323, guid: 73c921d6abd8eaa48ac2c590ca770156,
+        type: 3}
+      propertyPath: flashLength
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73c921d6abd8eaa48ac2c590ca770156, type: 3}
 --- !u!4 &120368029060456710 stripped
