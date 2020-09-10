@@ -44,7 +44,8 @@ public class DetectControlMethod : MonoBehaviour
         var dirRot = thePlayer.controls.Player.Rotation.ReadValue<Vector2>();
         Vector3 playerDirection = Vector3.right * dirRot.x + Vector3.forward * dirRot.y;
         //returns 1 if any rotation is being inputed from right joystick
-        if (playerDirection.sqrMagnitude > 0.0f && moveJoystick.InputDirection == Vector3.zero || playerDirectionMove.sqrMagnitude > 0.0f && moveJoystick.InputDirection == Vector3.zero)
+        if (playerDirection.sqrMagnitude > 0.0f && moveJoystick.InputDirection == Vector3.zero
+            && playerDirectionMove.sqrMagnitude > 0.0f && moveJoystick.InputDirection == Vector3.zero)
         { 
             thePlayer.usePS4Controller = true;
             thePlayer.useMouseController = false;
