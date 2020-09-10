@@ -16,6 +16,8 @@ public class PlayerHealthManager : MonoBehaviour
 
     public HealthBar healthBar;
 
+    public GameObject deathEffect;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -26,7 +28,7 @@ public class PlayerHealthManager : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
             FindObjectOfType<GameManager>().EndGame();
             gameObject.SetActive(false);
         }
