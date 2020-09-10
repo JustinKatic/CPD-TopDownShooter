@@ -80,11 +80,13 @@ public class PlayerController : MonoBehaviour
             }
 
         }
-        moveVelocity = moveInput * moveSpeed;
 
         //Rotate with Mouse
         if (useMouseController)
         {
+            if(onWeb)
+            moveInput = new Vector3(dirMove.x, 0f, dirMove.y);
+
             Ray cameraRay = cam.ScreenPointToRay(Input.mousePosition);
             Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
 
@@ -138,6 +140,7 @@ public class PlayerController : MonoBehaviour
 
            
         }
+        moveVelocity = moveInput * moveSpeed;
     }
 
 
