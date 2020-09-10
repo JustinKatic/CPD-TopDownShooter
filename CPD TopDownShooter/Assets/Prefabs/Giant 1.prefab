@@ -992,6 +992,7 @@ MonoBehaviour:
   blood2: {fileID: 2459954626238914700, guid: 4712011036e35d045bfae998d59d41ff, type: 3}
   hitBlood: {fileID: 2459954626238914700, guid: f7409129c8d012b4490dcb92996e9e3b,
     type: 3}
+  alterColourOfThis: {fileID: 1829875508244924148}
   flashLength: 0.5
 --- !u!114 &7946194481817114630
 MonoBehaviour:

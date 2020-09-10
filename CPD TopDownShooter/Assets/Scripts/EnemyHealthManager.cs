@@ -12,8 +12,9 @@ public class EnemyHealthManager : MonoBehaviour
     public GameObject blood;
     public GameObject blood2;
     public GameObject hitBlood;
+   // public GameObject alterColourOfThis;
 
-    public float flashLength;
+   // public float flashLength;
     private float flashCounter;
 
     private Renderer rend;
@@ -23,20 +24,25 @@ public class EnemyHealthManager : MonoBehaviour
     {
         //set initial health
         currentHealth = health;
-        rend = GetComponent<Renderer>();
-        storedColor = rend.material.GetColor("_Color");
+        //rend = GetComponent<Renderer>();
+       // alterColourOfThis.GetComponent<Renderer>();
+        //storedColor = rend.material.GetColor("_Color");
+       // storedColor = alterColourOfThis.material.GetColor("_Color");
+
     }
 
     void Update()
     {
-        if(flashCounter > 0)
-        {
-            flashCounter -= Time.deltaTime;
-            if(flashCounter <= 0)
-            {
-                rend.material.SetColor("_Color", storedColor);
-            }
-        }
+      //  if(flashCounter > 0)
+      //  {
+         //   flashCounter -= Time.deltaTime;
+         //   if(flashCounter <= 0)
+         //   {
+                // rend.material.SetColor("_Color", storedColor);
+               // alterColourOfThis.material.SetColor("_Color", storedColor);
+
+            //}
+       // }
 
         //destory object if health <0
         if (currentHealth <= 0)
@@ -58,7 +64,9 @@ public class EnemyHealthManager : MonoBehaviour
     {
         Instantiate(hitBlood, transform.position, Quaternion.identity);
         currentHealth -= damage;
-        flashCounter = flashLength;
-        rend.material.SetColor("_Color", Color.white);
+       // flashCounter = flashLength;
+        // rend.material.SetColor("_Color", Color.white);
+       // alterColourOfThis.material.SetColor("_Color", Color.white);
+        
     }
 }
