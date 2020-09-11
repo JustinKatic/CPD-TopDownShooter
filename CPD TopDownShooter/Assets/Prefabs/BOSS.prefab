@@ -291,7 +291,6 @@ MonoBehaviour:
   blood2: {fileID: 2459954626238914700, guid: b7c3f159701d0464f95ebaa62dfd2d40, type: 3}
   hitBlood: {fileID: 2459954626238914700, guid: f7409129c8d012b4490dcb92996e9e3b,
     type: 3}
-  flashLength: 0.1
 --- !u!114 &991225616514136767
 MonoBehaviour:
   m_ObjectHideFlags: 0
