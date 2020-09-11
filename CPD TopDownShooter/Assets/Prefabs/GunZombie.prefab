@@ -223,6 +223,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GunZombie
       objectReference: {fileID: 0}
+    - target: {fileID: 2440739843378846725, guid: 73c921d6abd8eaa48ac2c590ca770156,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4474888211867091323, guid: 73c921d6abd8eaa48ac2c590ca770156,
         type: 3}
       propertyPath: flashLength
