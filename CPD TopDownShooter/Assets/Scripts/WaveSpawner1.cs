@@ -1,11 +1,12 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using TMPro;
 
 public class WaveSpawner1 : MonoBehaviour
 {
 
-    public Text theWaveText;
+    public TextMeshProUGUI theWaveText;
    // public Text highscoreText;
 
     public enum SpawnState { SPAWNING, WAITING, COUNTING };

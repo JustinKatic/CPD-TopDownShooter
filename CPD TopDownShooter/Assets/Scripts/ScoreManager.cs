@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,9 +8,9 @@ public class ScoreManager : MonoBehaviour
 {
     public static int score;
 
-    public Text Scoretext;
+    public TextMeshProUGUI Scoretext;
 
-    public Text highscoreText;
+    public TextMeshProUGUI highscoreText;
 
     public GameObject player;
 
@@ -17,10 +18,10 @@ public class ScoreManager : MonoBehaviour
 
     void Awake()
     {
-        Scoretext = GetComponent<Text>();
+        Scoretext = GetComponent<TextMeshProUGUI>();
         score = 0;
 
-        highscoreText.text = "Highscore : " + PlayerPrefs.GetFloat("Highscore").ToString();
+        highscoreText.text = "High Score : " + PlayerPrefs.GetFloat("Highscore").ToString();
 
         highScore = PlayerPrefs.GetFloat("Highscore");
     }
@@ -28,7 +29,7 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Scoretext.text = "Zombie Kill Score: " + score;
+        Scoretext.text = "Kill Score: " + score;
 
 
         if (highScore < score)
