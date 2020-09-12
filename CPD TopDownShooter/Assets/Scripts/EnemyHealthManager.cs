@@ -15,10 +15,10 @@ public class EnemyHealthManager : MonoBehaviour
    // public GameObject alterColourOfThis;
 
    // public float flashLength;
-    private float flashCounter;
+    //private float flashCounter;
 
-    private Renderer rend;
-    private Color storedColor;
+    //private Renderer rend;
+   // private Color storedColor;
 
     void Start()
     {
@@ -47,7 +47,7 @@ public class EnemyHealthManager : MonoBehaviour
         //destory object if health <0
         if (currentHealth <= 0)
         {
-            if (gameObject.tag == "HealthZombie" || gameObject.tag == "Boss")
+            if (gameObject.tag == "HealthZombie" || gameObject.tag == "Boss" || gameObject.tag == "PowerUpZombie")
             {
                 var obj = GameObject.Instantiate(ItemToDrop);
                 obj.transform.position = transform.position;           

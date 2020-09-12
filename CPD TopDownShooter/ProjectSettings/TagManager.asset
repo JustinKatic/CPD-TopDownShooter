@@ -11,6 +11,9 @@ TagManager:
   - touchJoystick
   - Boss
   - ShotGun
+  - PowerUpZombie
+  - DoubleGunPickUp
+  - DoubleGun
   layers:
   - Default
   - TransparentFX

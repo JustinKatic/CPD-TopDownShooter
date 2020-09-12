@@ -23,7 +23,7 @@ public class BulletController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Giant" ||
-            collision.gameObject.tag == "HealthZombie" || collision.gameObject.tag == "Boss")
+            collision.gameObject.tag == "HealthZombie" || collision.gameObject.tag == "Boss" || collision.gameObject.tag == "PowerUpZombie")
         {
             collision.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(damageToGive);
             Destroy(gameObject);

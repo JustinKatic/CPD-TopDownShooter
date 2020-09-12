@@ -12,8 +12,11 @@ public class PlayerController : MonoBehaviour
 
     public GunController theGun;
     public GunController theGun1;
+    public GunController doubleGun;
+
     public GameObject theGunObj;
     public GameObject theGun1Obj;
+    public GameObject doubleGunObj;
 
     public VirtualJoystick moveJoystick;
     public VirtualJoystick rotationJoystick;
@@ -43,7 +46,9 @@ public class PlayerController : MonoBehaviour
         controls.Enable();
         theGunObj.SetActive(true);
         theGun1Obj.SetActive(false);
+        doubleGunObj.SetActive(false);
         theGun.isFiring = false;
+        doubleGun.isFiring = false;
 
     }
 
@@ -72,11 +77,13 @@ public class PlayerController : MonoBehaviour
             {
                 theGun.isFiring = true;
                 theGun1.isFiring = true;
+                doubleGun.isFiring = true;
             }
             else
             {
                 theGun.isFiring = false;
                 theGun1.isFiring = false;
+                doubleGun.isFiring = false;
             }
 
         }
@@ -105,12 +112,14 @@ public class PlayerController : MonoBehaviour
             {
                 theGun.isFiring = true;
                 theGun1.isFiring = true;
+                doubleGun.isFiring = true;
             }
             //if left mouse button is up dont shoot
             if (Input.GetMouseButtonUp(0))
             {
                 theGun.isFiring = false;
                 theGun1.isFiring = false;
+                doubleGun.isFiring = false;
             }
 
         }
@@ -129,6 +138,7 @@ public class PlayerController : MonoBehaviour
             {
                 theGun.isFiring = true;
                 theGun1.isFiring = true;
+                doubleGun.isFiring = true;
             }
 
             //If player has no current rotation selected with right joystick dont shoot
@@ -136,6 +146,7 @@ public class PlayerController : MonoBehaviour
             {
                 theGun.isFiring = false;
                 theGun1.isFiring = false;
+                doubleGun.isFiring = false;
             }
 
            
