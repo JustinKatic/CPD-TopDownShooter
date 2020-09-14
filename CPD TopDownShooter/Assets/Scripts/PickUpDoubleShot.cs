@@ -6,31 +6,16 @@ public class PickUpDoubleShot : MonoBehaviour
 {
 
     public GameObject doubleGun;
-    public GameObject defaultGun;
-
-    //public float powerUpTime;
-    //private float timer;
+   // public GameObject defaultGun;
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "DoubleGunPickUp")
         {
-            defaultGun.SetActive(false);
+            // defaultGun.SetActive(false);
+            doubleGun.GetComponent<GunActiveTimer>().timer += doubleGun.GetComponent<GunActiveTimer>().activeTimer;
             doubleGun.SetActive(true);
             Destroy(collision.gameObject);
         }
     }
-
-    //private void Update()
-    //{
-    //    if (timer > 0)
-    //    {
-    //        timer -= Time.deltaTime;
-    //        if (timer <= 0)
-    //        {
-    //            timer = powerUpTime;
-    //            doubleGun.SetActive(false);
-    //        }
-    //    }
-    //}
 }
