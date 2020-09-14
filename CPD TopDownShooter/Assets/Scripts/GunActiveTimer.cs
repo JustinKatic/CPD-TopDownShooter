@@ -13,6 +13,7 @@ public class GunActiveTimer : MonoBehaviour
         timer -= Time.deltaTime;
         if(timer <= 0)
         {
+            timer = activeTimer;
             gameObject.SetActive(false);
         }
     }
