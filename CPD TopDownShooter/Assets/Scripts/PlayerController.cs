@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// Controls player movement.
+/// </summary>
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
@@ -24,7 +27,7 @@ public class PlayerController : MonoBehaviour
     public bool usePS4Controller = false;
     public bool useMouseController = false;
     public bool useTouchController = false;
-    bool onWeb = false;
+    public bool onWeb = false;
     float invertControls = 1.0f;
 
     public Controls controls;
@@ -49,7 +52,7 @@ public class PlayerController : MonoBehaviour
         doubleGunObj.SetActive(false);
         theGun.isFiring = false;
         doubleGun.isFiring = false;
-
+       
     }
 
     void Update()

@@ -6,6 +6,9 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
+/// <summary>
+/// Controls the pause menu.
+/// </summary>
 public class PauseMenu : MonoBehaviour
 {
     public string mainMenuScene;
@@ -52,19 +55,35 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
-        if (onWeb)
+        if (onWeb && FindObjectOfType<DetectControlMethod>().thePlayer.usePS4Controller)
         {
             pauseMenuWeb.SetActive(true);
             EventSystem.current.SetSelectedGameObject(null);
 
             EventSystem.current.SetSelectedGameObject(pauseFirstButtonWeb);
         }
-        else //if (FindObjectOfType<PlayerController>().usePS4Controller)
+
+        if (onWeb)
+        {
+            pauseMenuWeb.SetActive(true);
+            //EventSystem.current.SetSelectedGameObject(null);
+
+            //EventSystem.current.SetSelectedGameObject(pauseFirstButton);
+        }
+
+        if (!onWeb && FindObjectOfType<DetectControlMethod>().thePlayer.usePS4Controller)
         {
             pauseMenuUI.SetActive(true);
             EventSystem.current.SetSelectedGameObject(null);
 
             EventSystem.current.SetSelectedGameObject(pauseFirstButton);
+        }
+        if (!onWeb)//if (FindObjectOfType<PlayerController>().usePS4Controller)
+        {
+            pauseMenuUI.SetActive(true);
+            //EventSystem.current.SetSelectedGameObject(null);
+
+            //EventSystem.current.SetSelectedGameObject(pauseFirstButton);
         }
 
         Time.timeScale = 0.0f;
@@ -88,7 +107,10 @@ public class PauseMenu : MonoBehaviour
 
         Time.timeScale = 1.0f;
         gameIsPaused = false;
-        touchPauseButton.SetActive(true);
+        if (FindObjectOfType<VirtualPauseButton>().onMobile)
+        { 
+            touchPauseButton.SetActive(true); 
+        }
     }
 
     public void LoadMenu()

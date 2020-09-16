@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Detects the control method being used.
+/// </summary>
 public class DetectControlMethod : MonoBehaviour
 {
     public PlayerController thePlayer;
     public VirtualJoystick moveJoystick;
     public VirtualJoystick rotationJoystick;
+
 
     void Update()
     {
