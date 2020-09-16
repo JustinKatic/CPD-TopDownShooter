@@ -59,7 +59,7 @@ public class PauseMenu : MonoBehaviour
 
             EventSystem.current.SetSelectedGameObject(pauseFirstButtonWeb);
         }
-        else
+        else //if (FindObjectOfType<PlayerController>().usePS4Controller)
         {
             pauseMenuUI.SetActive(true);
             EventSystem.current.SetSelectedGameObject(null);
