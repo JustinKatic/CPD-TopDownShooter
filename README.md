@@ -43,7 +43,7 @@ Unity 2019.3.6f1
 
 Visual Studio 2019
 
-### Author
+### Authors
 Justin Katic
 
 Igor Doslov
