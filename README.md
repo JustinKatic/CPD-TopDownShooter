@@ -1,6 +1,6 @@
 # CPD-TopDownShooter
 
-CPD-TopDownShooter is my assignment for Cross Platform Development.
+CPD-TopDownShooter is our assignment for Cross Platform Development.
 
 ## Requirements
 
