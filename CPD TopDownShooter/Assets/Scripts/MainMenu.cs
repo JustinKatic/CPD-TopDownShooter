@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// Handles the main menu.
+/// </summary>
 public class MainMenu : MonoBehaviour
 {
     public string newGameScene;

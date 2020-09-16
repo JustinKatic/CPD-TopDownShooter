@@ -32,8 +32,6 @@ public class DetectControlMethod : MonoBehaviour
             thePlayer.useTouchController = false;
         }
 
-       
-
         if (moveJoystick.InputDirection != Vector3.zero || rotationJoystick.InputDirection != Vector3.zero)
         {
             thePlayer.useTouchController = true;

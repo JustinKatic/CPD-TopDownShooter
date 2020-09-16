@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls the enemy movement and targets them at the player.
+/// </summary>
 public class EnemyController : MonoBehaviour
 {
     private Rigidbody rb;

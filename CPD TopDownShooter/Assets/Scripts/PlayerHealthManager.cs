@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Handles player health.
+/// </summary>
 public class PlayerHealthManager : MonoBehaviour
 {
     public int maxHealth;

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Sets the default gun to the shotgun when the shot gun power up is collected.
+/// </summary>
 public class PickUpShotGun : MonoBehaviour
 {
     // Start is called before the first frame update

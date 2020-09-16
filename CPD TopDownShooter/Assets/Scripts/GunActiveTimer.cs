@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls how long the gun is active.
+/// </summary>
 public class GunActiveTimer : MonoBehaviour
 {
     public float activeTimer;

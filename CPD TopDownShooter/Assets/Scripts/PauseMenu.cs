@@ -55,6 +55,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        // If on web and using controller
         if (onWeb && FindObjectOfType<DetectControlMethod>().thePlayer.usePS4Controller)
         {
             pauseMenuWeb.SetActive(true);
@@ -63,14 +64,14 @@ public class PauseMenu : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(pauseFirstButtonWeb);
         }
 
+        // If on web and using mouse and keyboard
         if (onWeb)
         {
             pauseMenuWeb.SetActive(true);
-            //EventSystem.current.SetSelectedGameObject(null);
-
-            //EventSystem.current.SetSelectedGameObject(pauseFirstButton);
+           
         }
 
+        // If not on web and using controller
         if (!onWeb && FindObjectOfType<DetectControlMethod>().thePlayer.usePS4Controller)
         {
             pauseMenuUI.SetActive(true);
@@ -78,12 +79,12 @@ public class PauseMenu : MonoBehaviour
 
             EventSystem.current.SetSelectedGameObject(pauseFirstButton);
         }
-        if (!onWeb)//if (FindObjectOfType<PlayerController>().usePS4Controller)
+
+        // If not on web and not using controller
+        if (!onWeb)
         {
             pauseMenuUI.SetActive(true);
-            //EventSystem.current.SetSelectedGameObject(null);
-
-            //EventSystem.current.SetSelectedGameObject(pauseFirstButton);
+           
         }
 
         Time.timeScale = 0.0f;

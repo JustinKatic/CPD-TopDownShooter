@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Loads the next scene.
+/// </summary>
 public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
@@ -15,10 +18,7 @@ public class LevelLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(Input.GetMouseButtonDown(0))
-        //{
-        //    LoadNextLevel();
-        //}
+        
     }
 
     public void LoadNextLevel()
@@ -29,8 +29,6 @@ public class LevelLoader : MonoBehaviour
 
         if (currentLevel == levels.Count)
             currentLevel = 0;
-
-
     }
 
     IEnumerator LoadLevel(int levelIndex)

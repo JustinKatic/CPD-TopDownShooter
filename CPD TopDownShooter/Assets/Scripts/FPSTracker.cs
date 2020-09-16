@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Shows FPS on screen.
+/// </summary>
 public class FPSTracker : MonoBehaviour
 {
     public Text fpsText;

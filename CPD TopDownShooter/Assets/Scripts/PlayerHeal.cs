@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Allows the player to be healed
+/// </summary>
 public class PlayerHeal : MonoBehaviour
 {
     public int healAmount;

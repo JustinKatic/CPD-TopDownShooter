@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Destroys a game object.
+/// </summary>
 public class DestroyGameObject : MonoBehaviour
 {
     // Start is called before the first frame update

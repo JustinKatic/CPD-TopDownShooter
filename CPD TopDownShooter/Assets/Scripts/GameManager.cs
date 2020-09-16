@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Checks if the game has ended and restarts the game after a delay.
+/// </summary>
 public class GameManager : MonoBehaviour
 {
     bool gameHasEnded = false;

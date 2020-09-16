@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Follows a game object.
+/// </summary>
 [ExecuteInEditMode]
 public class CameraFollow : MonoBehaviour
 {

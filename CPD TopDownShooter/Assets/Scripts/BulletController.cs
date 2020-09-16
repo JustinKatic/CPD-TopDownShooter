@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls bullet speed, direction, lifetime and damage.
+/// </summary>
 public class BulletController : MonoBehaviour
 {
     public float speed;

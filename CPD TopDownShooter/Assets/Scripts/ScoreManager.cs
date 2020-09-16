@@ -4,6 +4,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Handles saving and displaying the highscore.
+/// </summary>
 public class ScoreManager : MonoBehaviour
 {
     public static int score;

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Sets the double gun to active when the power up is collected.
+/// </summary>
 public class PickUpDoubleShot : MonoBehaviour
 {
 

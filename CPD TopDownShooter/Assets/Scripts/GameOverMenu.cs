@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// Handles the game over menu.
+/// </summary>
 public class GameOverMenu : MonoBehaviour
 {
     public string newGameScene;
