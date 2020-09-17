@@ -1,16 +1,44 @@
 # CPD-TopDownShooter
 
-CPD-TopDownShooter is our assignment for Cross Platform Development.
+This is our assignment for Cross Platform Development. It is a top-down zombie shoot em up.
 
 ## Requirements
+Windows:
+
+Windows 10.
+Keyboard and mouse or XBox controller.
+
+Web:
+Chrome, Firefox or Edge.
+
+Keyboard and mouse or XBox controller.
+
+Android:
 
 
 
 ## How To Use
+Windows:
 
+Double click on the installer and follow the prompts.
+
+Web:
+
+Click on this link:
+https://justinkatic.github.io/CPD-TopDownShooter/index.html
+
+Android:
+
+Install apk file as per your device.
 
 ## Description
 
+This is a zombie shoot em up called The Running Man. Stay alive as long as possible 
+by shooting zombies and collecting power ups and health packs.
+
+Large zombies appear with each wave. Destroy them to progress to the next wave. 
+
+Every fifth wave boss zombies will appear.
 
 
 ## Controls
@@ -37,6 +65,10 @@ On mobile:
 Left onscreen stick: move player
 
 Right onscreen stick: aim and shoot
+
+### Known bugs
+
+Pause menu controls may sometimes be inverted on web.
 
 ## Built With
 Unity 2019.3.6f1
