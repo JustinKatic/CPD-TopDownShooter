@@ -140,9 +140,24 @@ public class WaveSpawner1 : MonoBehaviour
     void SpawnEnemy(Transform _enemy)
     {
         Debug.Log("Spawning Enemy: " + _enemy.name);
-
         Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
-        Instantiate(_enemy, _sp.position, _sp.rotation);
+
+        if (_enemy.tag == "Giant")
+        {
+            GameObject giantZombie = ObjectPooler.SharedInstance.GetPooledObject("Giant");
+            giantZombie.transform.position = _sp.position;
+            giantZombie.transform.rotation = _sp.rotation;
+            giantZombie.SetActive(true);
+        }
+        if (_enemy.tag == "Boss")
+        {
+            GameObject boss = ObjectPooler.SharedInstance.GetPooledObject("Boss");
+            boss.transform.position = _sp.position;
+            boss.transform.rotation = _sp.rotation;
+            boss.SetActive(true);
+        }
+       
+     
     }
 
 }

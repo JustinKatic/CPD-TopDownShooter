@@ -27,6 +27,11 @@ PrefabInstance:
       propertyPath: lifeTime
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2485081008689964278, guid: 38835e28bcc57a1429f3f0097fbc84c7,
+        type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 5319421484478435170, guid: 38835e28bcc57a1429f3f0097fbc84c7,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -96,6 +101,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582669061760776484, guid: 38835e28bcc57a1429f3f0097fbc84c7,
+        type: 3}
+      propertyPath: m_TagString
+      value: EnemyBullet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38835e28bcc57a1429f3f0097fbc84c7, type: 3}

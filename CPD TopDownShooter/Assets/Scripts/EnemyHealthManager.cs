@@ -12,16 +12,15 @@ public class EnemyHealthManager : MonoBehaviour
     public int currentHealth;
     public int scoreValue = 1;
     public GameObject ItemToDrop;
-    public GameObject blood;
-    public GameObject blood2;
-    public GameObject hitBlood;
-   
+    //public GameObject blood;
+    //public GameObject blood2;
+    //public GameObject hitBlood;
 
-    void Start()
+
+    private void OnEnable()
     {
         //set initial health
-        currentHealth = health;
-
+        currentHealth = health;   
     }
 
     void Update()
@@ -34,17 +33,33 @@ public class EnemyHealthManager : MonoBehaviour
                 var obj = GameObject.Instantiate(ItemToDrop);
                 obj.transform.position = transform.position;           
             }
-            Instantiate(blood, transform.position, Quaternion.identity);
-            Instantiate(blood2, transform.position, Quaternion.identity);
+            GameObject blood = ObjectPooler.SharedInstance.GetPooledObject("Blood");
+            blood.transform.position = transform.position;
+            blood.transform.rotation = Quaternion.identity;
+            blood.SetActive(true);
+            // Instantiate(blood, transform.position, Quaternion.identity);
+            GameObject blood2 = ObjectPooler.SharedInstance.GetPooledObject("Blood2");
+            blood2.transform.position = transform.position;
+            blood2.transform.rotation = Quaternion.identity;
+            blood2.SetActive(true);
+            //Instantiate(blood2, transform.position, Quaternion.identity);
+
+            //add score
             ScoreManager.score += scoreValue;
-            Destroy(gameObject);
+
+            //set zombie to false
+            gameObject.SetActive(false);
         }
     }
 
     //damage Enemy Object
     public void HurtEnemy(int damage)
     {
-        Instantiate(hitBlood, transform.position, Quaternion.identity);
+        GameObject hitBlood = ObjectPooler.SharedInstance.GetPooledObject("HitBlood");
+        hitBlood.transform.position = transform.position;
+        hitBlood.transform.rotation = Quaternion.identity;
+        hitBlood.SetActive(true);
+       // Instantiate(hitBlood, transform.position, Quaternion.identity);
         currentHealth -= damage;
     }
 }

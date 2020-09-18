@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: -7265779564127689635}
   m_Layer: 0
   m_Name: SmallZombie
-  m_TagString: Enemy
+  m_TagString: SmallZombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -72,5 +72,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoubleBullet
       objectReference: {fileID: 0}
+    - target: {fileID: 6582669061760776484, guid: 38835e28bcc57a1429f3f0097fbc84c7,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerPowerUp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38835e28bcc57a1429f3f0097fbc84c7, type: 3}

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -6234017179775214115}
   m_Layer: 0
   m_Name: Bullet 1
-  m_TagString: Untagged
+  m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,8 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccc2e0d9053ea844859e5be4ceb7492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  lifeTime: 3
+  speed: 40
   damageToGive: 1
 --- !u!65 &8433356307333365937
 BoxCollider:
