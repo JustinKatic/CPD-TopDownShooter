@@ -26,6 +26,7 @@ TagManager:
   - HitBlood
   - Blood
   - Blood2
+  - ZombieBloodSplash
   layers:
   - Default
   - TransparentFX

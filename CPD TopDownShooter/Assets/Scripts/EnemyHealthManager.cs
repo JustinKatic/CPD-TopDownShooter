@@ -37,13 +37,24 @@ public class EnemyHealthManager : MonoBehaviour
             blood.transform.position = transform.position;
             blood.transform.rotation = Quaternion.identity;
             blood.SetActive(true);
-            // Instantiate(blood, transform.position, Quaternion.identity);
-            GameObject blood2 = ObjectPooler.SharedInstance.GetPooledObject("Blood2");
-            blood2.transform.position = transform.position;
-            blood2.transform.rotation = Quaternion.identity;
-            blood2.SetActive(true);
-            //Instantiate(blood2, transform.position, Quaternion.identity);
 
+            GameObject blood3 = ObjectPooler.SharedInstance.GetPooledObject("ZombieBloodSplash");
+            blood3.transform.position = transform.position;
+            blood3.transform.rotation = Quaternion.identity;
+            blood3.SetActive(true);
+
+            if (gameObject.tag == "Giant")
+            {
+                GameObject blood2 = ObjectPooler.SharedInstance.GetPooledObject("Blood2");
+                blood2.transform.position = transform.position;
+                blood2.transform.rotation = Quaternion.identity;
+                blood2.SetActive(true);
+             
+                blood3.transform.position = transform.position;
+                blood3.transform.rotation = Quaternion.identity;
+                blood3.SetActive(true);
+            }
+   
             //add score
             ScoreManager.score += scoreValue;
 
