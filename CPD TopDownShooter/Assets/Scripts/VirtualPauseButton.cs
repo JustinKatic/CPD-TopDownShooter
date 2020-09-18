@@ -12,7 +12,7 @@ public class VirtualPauseButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-#if (UNITY_ANDROID || UNITY_IOS || UNITY_WP8 || UNITY_WP8_1 || UNITY_WEBGL)
+#if (UNITY_ANDROID || UNITY_IOS || UNITY_WP8 || UNITY_WP8_1)
         onMobile = true;
 #endif
         if (!onMobile)
