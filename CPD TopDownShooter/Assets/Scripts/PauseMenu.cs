@@ -55,37 +55,31 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
-        // If on web and using controller
-        if (onWeb && FindObjectOfType<DetectControlMethod>().thePlayer.usePS4Controller)
-        {
-            pauseMenuWeb.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(null);
-
-            EventSystem.current.SetSelectedGameObject(pauseFirstButtonWeb);
-        }
-
-        // If on web and using mouse and keyboard
+        // If on web 
         if (onWeb)
         {
             pauseMenuWeb.SetActive(true);
-           
+            // If using controller
+            if (FindObjectOfType<DetectControlMethod>().thePlayer.usePS4Controller)
+            {
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(pauseFirstButtonWeb);
+            }
         }
 
-        // If not on web and using controller
-        if (!onWeb && FindObjectOfType<DetectControlMethod>().thePlayer.usePS4Controller)
-        {
-            pauseMenuUI.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(null);
-
-            EventSystem.current.SetSelectedGameObject(pauseFirstButton);
-        }
-
-        // If not on web and not using controller
+        // If not on web 
         if (!onWeb)
         {
             pauseMenuUI.SetActive(true);
-           
+            // If using controller
+            if (FindObjectOfType<DetectControlMethod>().thePlayer.usePS4Controller)
+            {
+                EventSystem.current.SetSelectedGameObject(null);
+
+                EventSystem.current.SetSelectedGameObject(pauseFirstButton);
+            }
         }
+
 
         Time.timeScale = 0.0f;
         gameIsPaused = true;
